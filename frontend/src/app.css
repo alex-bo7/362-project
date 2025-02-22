@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #212529;
+  --secondary-color: #f8f9fa;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  max-width: 1440px;
+  margin: 0 auto;
+}
