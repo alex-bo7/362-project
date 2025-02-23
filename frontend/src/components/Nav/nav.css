@@ -1,7 +1,3 @@
-.nav {
-  padding: 1rem 2rem;
-}
-
 .nav-ul {
   list-style: none;
 }
@@ -24,25 +20,12 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 0.5rem;
+  gap: 1rem;
   margin-top: 1rem;
 }
 
-.nav-links {
-  text-decoration: none;
-  color: inherit;
-}
-.nav-links:hover,
-.nav-links:focus, /*clicked on*/
-.nav-links:active /*tab*/ {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-}
-
-.nav-links.authenticate {
-  border: 0.125rem solid var(--primary-color);
-  border-radius: 0.25rem;
-  padding: 0.25rem 0.5rem;
+.page-btn-links.account {
+  border: none;
 }
 
 @media (min-width: 768px) {

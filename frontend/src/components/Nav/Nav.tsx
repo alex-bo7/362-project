@@ -14,35 +14,43 @@ export default function Nav() {
   console.log(showMenu);
 
   return (
-    <nav className="nav">
-      <ul className="nav-ul nav-list">
-        <li>Logo.</li>
-        <li className="nav-icon menu-icon">
-          <i
-            className={`fa-solid ${showMenu ? "fa-bars-staggered" : "fa-bars"}`}
-            onClick={toggleMenu}
-          ></i>
-        </li>
-      </ul>
-      {!isLoggedIn && (
-        <ul className={`nav-ul menu-list ${showMenu ? "show" : "none"}`}>
-          <a href="/" className="nav-links authenticate">
-            <li>Login</li>
-          </a>
-          <a href="/" className="nav-links authenticate">
-            <li>Sign Up</li>
-          </a>
-        </ul>
-      )}
-      {isLoggedIn && (
-        <ul className={`nav-ul menu-list ${showMenu ? "show" : "none"}`}>
-          <li className="nav-icon">
-            <a href="/" className="nav-links">
-              <i className="fa-solid fa-circle-user"></i>
-            </a>
+    <nav>
+      <div className="page-component-padding nav">
+        <ul className="nav-ul nav-list">
+          <li>Logo.</li>
+          <li className="nav-icon menu-icon">
+            <i
+              className={`fa-solid ${
+                showMenu ? "fa-bars-staggered" : "fa-bars"
+              }`}
+              onClick={toggleMenu}
+            ></i>
           </li>
         </ul>
-      )}
+        {!isLoggedIn && (
+          <ul className={`nav-ul menu-list ${showMenu ? "show" : "none"}`}>
+            <li>
+              <a href="/" className="page-btn-links">
+                Login
+              </a>
+            </li>
+            <li>
+              <a href="/" className="page-btn-links">
+                Sign Up
+              </a>
+            </li>
+          </ul>
+        )}
+        {isLoggedIn && (
+          <ul className={`nav-ul menu-list ${showMenu ? "show" : "none"}`}>
+            <li className="nav-icon">
+              <a href="/" className="page-btn-links account">
+                <i className="fa-solid fa-circle-user"></i>
+              </a>
+            </li>
+          </ul>
+        )}
+      </div>
     </nav>
   );
 }

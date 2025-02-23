@@ -16,3 +16,22 @@ body {
   max-width: 1440px;
   margin: 0 auto;
 }
+
+/* global utility classes */
+.page-component-padding {
+  padding: 1rem 2rem;
+}
+
+.page-btn-links {
+  text-decoration: none;
+  color: inherit;
+  border: 0.125rem solid var(--primary-color);
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+}
+.page-btn-links:hover,
+.page-btn-links:focus, /*clicked on*/
+.page-btn-links:active /*tab*/ {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}

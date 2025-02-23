@@ -1,0 +1,30 @@
+.hero {
+  height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-text {
+  margin: 1rem 0;
+}
+
+.hero-btns-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 15rem;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    height: 95vh;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-header-newline {
+    display: none;
+  }
+}
