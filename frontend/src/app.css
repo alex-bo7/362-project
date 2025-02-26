@@ -13,8 +13,6 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 1.25rem;
   color: var(--primary-color);
-  max-width: 1440px;
-  margin: 0 auto;
 }
 
 /* global utility classes */
@@ -34,4 +32,11 @@ body {
 .page-btn-links:active /*tab*/ {
   background-color: var(--primary-color);
   color: var(--secondary-color);
+}
+
+@media (min-width: 2560px) {
+  body {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 }
