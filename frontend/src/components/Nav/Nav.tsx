@@ -17,7 +17,11 @@ export default function Nav() {
     <nav>
       <div className="page-component-padding nav">
         <ul className="nav-ul nav-list">
-          <li>Logo.</li>
+          <li>
+            <a href="/" className="page-btn-links home">
+              Logo.
+            </a>
+          </li>
           <li className="nav-icon menu-icon">
             <i
               className={`fa-solid ${
@@ -30,12 +34,12 @@ export default function Nav() {
         {!isLoggedIn && (
           <ul className={`nav-ul menu-list ${showMenu ? "show" : "none"}`}>
             <li>
-              <a href="/" className="page-btn-links">
+              <a href="/login" className="page-btn-links">
                 Login
               </a>
             </li>
             <li>
-              <a href="/" className="page-btn-links">
+              <a href="/signup" className="page-btn-links">
                 Sign Up
               </a>
             </li>

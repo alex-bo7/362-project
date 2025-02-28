@@ -34,6 +34,23 @@ body {
   color: var(--secondary-color);
 }
 
+.main-full-height {
+  height: 92vh;
+  padding-top: 5.5rem;
+}
+
+@media (min-width: 768px) {
+  .main-full-height {
+    padding-top: 11rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .main-full-height {
+    padding-top: 18rem;
+  }
+}
+
 @media (min-width: 2560px) {
   body {
     max-width: 1440px;

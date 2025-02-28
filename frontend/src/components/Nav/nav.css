@@ -24,7 +24,8 @@
   margin-top: 1rem;
 }
 
-.page-btn-links.account {
+.page-btn-links.account,
+.page-btn-links.home {
   border: none;
 }
 

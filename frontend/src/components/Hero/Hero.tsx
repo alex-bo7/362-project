@@ -24,7 +24,7 @@ export default function Hero() {
               </a>
             </li>
             <li>
-              <a href="/" className="page-btn-links">
+              <a href="/signup" className="page-btn-links">
                 Start Earning
               </a>
             </li>
