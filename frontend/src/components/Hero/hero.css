@@ -14,7 +14,7 @@
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 12.5rem;
+  margin: 1rem 0 12.5rem 0;
 }
 
 @media (min-width: 768px) {
@@ -26,5 +26,9 @@
 
   .hero-header-newline {
     display: none;
+  }
+
+  .hero-btns-list {
+    margin-bottom: 5rem;
   }
 }
