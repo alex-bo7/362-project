@@ -16,7 +16,10 @@ export default function LoginForm() {
       />
       <button className="form-btn">Login</button>
       <p className="form-text">
-        Don't have an account? <a href="/signup">Signup</a>
+        Don't have an account?{" "}
+        <a href="/signup" className="form-link">
+          Signup
+        </a>
       </p>
     </form>
   );

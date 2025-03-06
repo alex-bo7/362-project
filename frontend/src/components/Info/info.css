@@ -1,0 +1,9 @@
+.info {
+  padding: 2rem 0;
+}
+
+@media (min-width: 1080px) {
+  .info {
+    padding: 5rem 0;
+  }
+}

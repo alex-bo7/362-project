@@ -9,6 +9,8 @@
 
   border: 1px solid var(--primary-color);
   border-radius: 0.5rem;
+
+  background-color: var(--secondary-color);
 }
 
 .form-input {
@@ -20,8 +22,26 @@
   padding: 3rem 1rem;
 }
 
+.form-input,
+.form-btn {
+  border: 2px solid var(--primary-color);
+  border-radius: 0.5rem;
+}
+
 .form-btn {
   width: 80%;
   font-size: inherit;
   padding: 1rem 2rem;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+.form-btn:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  cursor: pointer;
+  box-shadow: 0 0 6px 3px;
+}
+
+.form-link {
+  color: var(--highlight-color);
 }

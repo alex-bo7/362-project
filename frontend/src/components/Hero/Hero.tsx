@@ -19,7 +19,7 @@ export default function Hero() {
         <div>
           <ul className="hero-btns-list">
             <li>
-              <a href="/" className="page-btn-links">
+              <a href="#info" className="page-btn-links">
                 Learn More
               </a>
             </li>

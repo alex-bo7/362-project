@@ -21,7 +21,10 @@ export default function SignupForm() {
       />
       <button className="form-btn">Signup</button>
       <p className="form-text">
-        Already have an account? <a href="/login">Login</a>
+        Already have an account?{" "}
+        <a href="/login" className="form-link">
+          Login
+        </a>
       </p>
     </form>
   );
