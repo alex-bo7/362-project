@@ -10,7 +10,7 @@
   border: 1px solid var(--primary-color);
   border-radius: 0.5rem;
 
-  background-color: var(--secondary-color);
+  background-color: var(--bg-color);
 }
 
 .form-input {

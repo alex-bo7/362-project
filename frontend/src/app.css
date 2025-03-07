@@ -5,18 +5,18 @@
 }
 
 :root {
-  /* --primary-color: #212529; */
-  --primary-color: #344e41;
+  /* black #212529; */
+  --primary-color: #386641;
   --secondary-color: #f8f9fa;
   --highlight-color: #25a244;
-  --bg-color: #e9f5db;
+  --bg-color: #fff;
 }
 
 body {
   font-family: "Inter", sans-serif;
   font-size: 1.25rem;
   color: var(--primary-color);
-  background-color: var(--bg-color);
+  background-color: var(--secondary-color);
 }
 
 /* global utility classes */
