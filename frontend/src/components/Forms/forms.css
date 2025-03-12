@@ -45,3 +45,8 @@
 .form-link {
   color: var(--highlight-color);
 }
+
+.form-error {
+  margin-bottom: 2rem;
+  color: var(--error-color);
+}

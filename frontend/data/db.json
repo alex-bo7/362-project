@@ -5,6 +5,12 @@
       "email": "john@gmail.com",
       "password": "johnTheGreatestDoe",
       "points": 8
+    },
+    {
+      "id": 7014,
+      "email": "alex@gmail.com",
+      "password": "1234",
+      "points": 0
     }
   ]
 }
