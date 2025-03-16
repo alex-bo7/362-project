@@ -76,6 +76,7 @@ export default function SignupForm() {
       <h2 className="form-text">Signup</h2>
       <input
         type="email"
+        name="email"
         value={email}
         onChange={handleEmailInput}
         placeholder="Enter your email"
@@ -83,6 +84,7 @@ export default function SignupForm() {
       />
       <input
         type="password"
+        name="password"
         value={password}
         onChange={handlePasswordInput}
         placeholder="Create a password"
@@ -90,6 +92,7 @@ export default function SignupForm() {
       />
       <input
         type="password"
+        name="confirmPassword"
         value={confirmPassword}
         onChange={handleConfirmPasswordInput}
         placeholder="Confirm your password"

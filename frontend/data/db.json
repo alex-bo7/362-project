@@ -1,15 +1,27 @@
 {
   "users": [
     {
-      "id": 0,
+      "id": "0",
       "email": "john@gmail.com",
       "password": "johnTheGreatestDoe",
       "points": 8
     },
     {
-      "id": 7014,
+      "id": "7014",
       "email": "alex@gmail.com",
       "password": "1234",
+      "points": 0
+    },
+    {
+      "id": "30704",
+      "email": "an@gmail.com",
+      "password": "11",
+      "points": 0
+    },
+    {
+      "id": 31537,
+      "email": "",
+      "password": "",
       "points": 0
     }
   ]
