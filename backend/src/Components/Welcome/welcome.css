@@ -1,0 +1,14 @@
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.welcome-btn {
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
