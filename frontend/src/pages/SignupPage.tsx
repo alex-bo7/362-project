@@ -2,12 +2,17 @@ import Footer from "../components/Footer/Footer";
 import Nav from "../components/Nav/Nav";
 import SignupForm from "../components/Forms/SignupForm";
 
-export default function SignupPage() {
+interface SignupPageProps {
+  isLoggedIn: boolean;
+  handleLogin: () => void;
+}
+
+export default function SignupPage(props: SignupPageProps) {
   return (
     <>
-      <Nav />
+      <Nav isLoggedIn={props.isLoggedIn} />
       <main className="main-full-height">
-        <SignupForm />
+        <SignupForm HandleLogin={props.handleLogin} />
       </main>
       <Footer />
     </>

@@ -1,6 +1,10 @@
 import { useState } from "react";
 import "./forms.css";
 
+interface SignupProps {
+  HandleLogin: () => void;
+}
+
 interface Data {
   id: number;
   email: string;
@@ -8,7 +12,7 @@ interface Data {
   points: number;
 }
 
-export default function SignupForm() {
+export default function SignupForm(props: SignupProps) {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [confirmPassword, setConfirmPassword] = useState<string>("");

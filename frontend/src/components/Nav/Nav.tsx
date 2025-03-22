@@ -1,11 +1,13 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./nav.css";
 
-export default function Nav() {
-  const [isLoggedIn, setIsLoggenIn] = useState<boolean>(false);
-  const [showMenu, setShowMenu] = useState<boolean>(false);
+interface NavProps {
+  isLoggedIn: boolean;
+}
 
-  // TODO: Handle user login - authenticate, auto-SSO?
+export default function Nav(props: NavProps) {
+  const [showMenu, setShowMenu] = useState<boolean>(false);
 
   function toggleMenu() {
     setShowMenu((prevShowMenu) => !prevShowMenu);
@@ -18,9 +20,9 @@ export default function Nav() {
       <div className="page-component-padding nav">
         <ul className="nav-ul nav-list">
           <li>
-            <a href="/" className="page-btn-links home">
+            <Link to="/" className="page-btn-links home">
               Logo.
-            </a>
+            </Link>
           </li>
           <li className="nav-icon menu-icon">
             <i
@@ -31,26 +33,26 @@ export default function Nav() {
             ></i>
           </li>
         </ul>
-        {!isLoggedIn && (
+        {!props.isLoggedIn && (
           <ul className={`nav-ul menu-list ${showMenu ? "show" : "none"}`}>
             <li>
-              <a href="/login" className="page-btn-links">
+              <Link to={"/login"} className="page-btn-links">
                 Login
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/signup" className="page-btn-links">
+              <Link to={"/signup"} className="page-btn-links">
                 Sign Up
-              </a>
+              </Link>
             </li>
           </ul>
         )}
-        {isLoggedIn && (
+        {props.isLoggedIn && (
           <ul className={`nav-ul menu-list ${showMenu ? "show" : "none"}`}>
             <li className="nav-icon">
-              <a href="/" className="page-btn-links account">
+              <Link to={"/account"} className="page-btn-links account">
                 <i className="fa-solid fa-circle-user"></i>
-              </a>
+              </Link>
             </li>
           </ul>
         )}

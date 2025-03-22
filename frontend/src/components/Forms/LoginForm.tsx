@@ -1,9 +1,15 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import "./forms.css";
 
-export default function LoginForm() {
+interface LoginFormProps {
+  HandleLogin: () => void;
+}
+
+export default function LoginForm(props: LoginFormProps) {
   const { data, error, loading } = useFetch("http://localhost:3000/users");
+  const navigate = useNavigate();
 
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
@@ -37,8 +43,10 @@ export default function LoginForm() {
       return;
     }
 
-    if (DoesPasswordMatch(index)) console.log("password match");
-    else setErrorMessage("Incorrect password");
+    if (DoesPasswordMatch(index)) {
+      props.HandleLogin();
+      navigate("/account");
+    } else setErrorMessage("Incorrect password");
   }
 
   return (

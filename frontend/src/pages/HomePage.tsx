@@ -3,10 +3,14 @@ import Footer from "../components/Footer/Footer";
 import Hero from "../components/Hero/Hero";
 import Info from "../components/Info/Info";
 
-export default function HomePage() {
+interface HomePageProps {
+  isLoggedIn: boolean;
+}
+
+export default function HomePage(props: HomePageProps) {
   return (
     <>
-      <Nav />
+      <Nav isLoggedIn={props.isLoggedIn} />
       <main>
         <Hero />
         <Info />
