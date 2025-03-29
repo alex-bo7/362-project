@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./app.css";
 import Welcome from "./Components/Welcome/Welcome";
+import Form from "./Components/Form/Form";
 
 const App: React.FC = () => {
   const [wantForm, setWantForm] = useState<boolean>(false);
@@ -13,7 +14,7 @@ const App: React.FC = () => {
     <>
       <main className="app-content-position">
         {!wantForm && <Welcome ToggleWantForm={ToggleWantForm} />}
-        {wantForm && <p>form</p>}
+        {wantForm && <Form />}
       </main>
     </>
   );
