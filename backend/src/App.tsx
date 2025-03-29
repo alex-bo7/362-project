@@ -14,7 +14,7 @@ const App: React.FC = () => {
     <>
       <main className="app-content-position">
         {!wantForm && <Welcome ToggleWantForm={ToggleWantForm} />}
-        {wantForm && <Form />}
+        {wantForm && <Form ToggleWantForm={ToggleWantForm} />}
       </main>
     </>
   );

@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./checkbox.css";
+
 interface CheckboxProps {
   labelName: string;
   state: boolean;
@@ -18,9 +20,10 @@ const Checkbox: React.FC<CheckboxProps> = (props) => {
         checked={props.state}
         onChange={HandleCheckedChange}
         className="checkbox-input"
-        name="trash1"
+        name={props.labelName}
+        id={props.labelName}
       />
-      <label htmlFor="trash1" className="trash-label">
+      <label htmlFor={props.labelName} className="trash-label">
         {props.labelName}
       </label>
     </div>
