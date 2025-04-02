@@ -10,6 +10,7 @@ import { useState } from "react";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+  const [userId, setUserId] = useState<string>("");
 
   function HandleLogin() {
     setIsLoggedIn(true);

@@ -8,7 +8,7 @@ interface LoginFormProps {
 }
 
 export default function LoginForm(props: LoginFormProps) {
-  const { data, error, loading } = useFetch("http://localhost:3000/users");
+  const db = useFetch("http://localhost:3000/users");
   const navigate = useNavigate();
 
   const [email, setEmail] = useState<string>("");
@@ -24,14 +24,14 @@ export default function LoginForm(props: LoginFormProps) {
   }
 
   function GetUserIndex(): number {
-    for (let i = 0; i < data.length; ++i) {
-      if (data[i].email == email) return i;
+    for (let i = 0; i < db.data.length; ++i) {
+      if (db.data[i].email == email) return i;
     }
     return -1;
   }
 
   function DoesPasswordMatch(index: number): boolean {
-    return data[index].password == password;
+    return db.data[index].password == password;
   }
 
   function HandleSubmit(event: React.FormEvent<HTMLFormElement>) {
