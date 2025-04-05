@@ -3,6 +3,7 @@ import User from "../components/User/User";
 
 interface AccountProps {
   isLoggedIn: boolean;
+  userId: string;
 }
 
 export default function Account(props: AccountProps) {
@@ -10,7 +11,7 @@ export default function Account(props: AccountProps) {
     <>
       <Nav isLoggedIn={props.isLoggedIn} />
       <main>
-        <User />
+        <User userId={props.userId} />
       </main>
     </>
   );

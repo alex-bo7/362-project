@@ -10,11 +10,13 @@ import { useState } from "react";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
-  const [userId, setUserId] = useState<string>("");
+  const [userId, setUserId] = useState<string | null>(null);
 
   function HandleLogin() {
     setIsLoggedIn(true);
   }
+
+  console.log(userId);
 
   return (
     <BrowserRouter>
@@ -23,7 +25,11 @@ function App() {
         <Route
           path="/login"
           element={
-            <LoginPage isLoggedIn={isLoggedIn} handleLogin={HandleLogin} />
+            <LoginPage
+              isLoggedIn={isLoggedIn}
+              handleLogin={HandleLogin}
+              setUserId={setUserId}
+            />
           }
         />
         <Route
@@ -32,7 +38,10 @@ function App() {
             <SignupPage isLoggedIn={isLoggedIn} handleLogin={HandleLogin} />
           }
         />
-        <Route path="/account" element={<Account isLoggedIn={isLoggedIn} />} />
+        <Route
+          path="/account"
+          element={<Account isLoggedIn={isLoggedIn} userId={userId} />}
+        />
       </Routes>
     </BrowserRouter>
   );

@@ -5,6 +5,7 @@ import "./forms.css";
 
 interface LoginFormProps {
   HandleLogin: () => void;
+  setUserId: (state: string) => void;
 }
 
 export default function LoginForm(props: LoginFormProps) {
@@ -42,6 +43,8 @@ export default function LoginForm(props: LoginFormProps) {
       setErrorMessage("Email does NOT exsist in database");
       return;
     }
+
+    props.setUserId(db.data[index].id);
 
     if (DoesPasswordMatch(index)) {
       props.HandleLogin();

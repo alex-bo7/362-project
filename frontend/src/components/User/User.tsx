@@ -1,8 +1,13 @@
 import useFetch from "../../hooks/useFetch";
 import "./user.css";
 
-const User: React.FC = () => {
-  const db = useFetch("http://localhost:3000/users");
+interface UserProps {
+  userId: string;
+}
+
+const User: React.FC<UserProps> = (props) => {
+  const db = useFetch(`http://localhost:3000/users/${props.userId}`);
+  console.log(db);
 
   return (
     <section className="user-section">
@@ -11,9 +16,8 @@ const User: React.FC = () => {
         alt="user-profile-picture"
         className="user-pfp"
       />
-      <h2>Hello, User</h2>
-      <p>Points: </p>
-      <button>Redeem Points</button>
+      <h2>Hello, {db.data.email}</h2>
+      <p>Points: {db.data.points}</p>
     </section>
   );
 };

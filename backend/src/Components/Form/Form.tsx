@@ -12,7 +12,7 @@ const Form: React.FC<FormProps> = (props) => {
   const [isCardboard, setIsCardboard] = useState<boolean>(false);
   const [isPlastic, setIsPlastic] = useState<boolean>(false);
 
-  const [email, setEmail] = useState<string>("an@gmail.com");
+  const [email, setEmail] = useState<string>("");
   const [link, setLink] = useState<string>("http://localhost:3000/users");
 
   const db = useFetch(link);
@@ -36,6 +36,10 @@ const Form: React.FC<FormProps> = (props) => {
     return -1;
   }
 
+  function HandleEmailInput(event: React.ChangeEvent<HTMLFormElement>) {
+    setEmail(event.target.value);
+  }
+
   function HandleCancel() {
     props.ToggleWantForm();
   }
@@ -48,7 +52,7 @@ const Form: React.FC<FormProps> = (props) => {
     return points;
   }
 
-  function HandleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  function HandleSubmit(event: React.formeven<HTMLInputElement>) {
     event.preventDefault();
 
     setLink((prevLink) => (prevLink += "?email=" + email));
@@ -58,6 +62,8 @@ const Form: React.FC<FormProps> = (props) => {
       const newPoints = db.data[userIdx].points + POINTS;
       updateUser(db.data[userIdx].id, newPoints);
     }
+
+    props.ToggleWantForm();
   }
 
   return (
@@ -70,6 +76,8 @@ const Form: React.FC<FormProps> = (props) => {
         placeholder="Enter email"
         name="email"
         className="form-input"
+        value={email}
+        onChange={HandleEmailInput}
       />
 
       <label htmlFor="trash-selection" className="form-label">
