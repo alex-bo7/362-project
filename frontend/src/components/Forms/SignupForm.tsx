@@ -1,12 +1,14 @@
 import { useState } from "react";
 import "./forms.css";
+import { useNavigate } from "react-router-dom";
 
 interface SignupProps {
   HandleLogin: () => void;
+  setUserId: (state: string) => void;
 }
 
 interface Data {
-  id: number;
+  id: string;
   email: string;
   password: string;
   points: number;
@@ -18,6 +20,7 @@ export default function SignupForm(props: SignupProps) {
   const [confirmPassword, setConfirmPassword] = useState<string>("");
   const [passwordsMatch, setPasswordMatch] = useState<boolean>(true);
   const [error, setError] = useState<string>("");
+  const navigate = useNavigate();
 
   // region InputHandlers
   function handleEmailInput(event: React.ChangeEvent<HTMLInputElement>) {
@@ -51,7 +54,7 @@ export default function SignupForm(props: SignupProps) {
     setPasswordMatch(true);
 
     const newUser: Data = {
-      id: generateRandomId(),
+      id: generateRandomId().toString(),
       email: email,
       password: password,
       points: 0,
@@ -73,6 +76,10 @@ export default function SignupForm(props: SignupProps) {
     } catch (error) {
       setError(error instanceof Error ? error.message : "Failed to add User");
     }
+
+    props.setUserId(newUser.id.toString());
+    props.HandleLogin();
+    navigate("/account");
   }
 
   return (

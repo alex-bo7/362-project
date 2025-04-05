@@ -16,8 +16,6 @@ function App() {
     setIsLoggedIn(true);
   }
 
-  console.log(userId);
-
   return (
     <BrowserRouter>
       <Routes>
@@ -35,7 +33,11 @@ function App() {
         <Route
           path="/signup"
           element={
-            <SignupPage isLoggedIn={isLoggedIn} handleLogin={HandleLogin} />
+            <SignupPage
+              isLoggedIn={isLoggedIn}
+              handleLogin={HandleLogin}
+              setUserId={setUserId}
+            />
           }
         />
         <Route

@@ -5,6 +5,7 @@ import SignupForm from "../components/Forms/SignupForm";
 interface SignupPageProps {
   isLoggedIn: boolean;
   handleLogin: () => void;
+  setUserId: (state: string) => void;
 }
 
 export default function SignupPage(props: SignupPageProps) {
@@ -12,7 +13,10 @@ export default function SignupPage(props: SignupPageProps) {
     <>
       <Nav isLoggedIn={props.isLoggedIn} />
       <main className="main-full-height">
-        <SignupForm HandleLogin={props.handleLogin} />
+        <SignupForm
+          HandleLogin={props.handleLogin}
+          setUserId={props.setUserId}
+        />
       </main>
       <Footer />
     </>
