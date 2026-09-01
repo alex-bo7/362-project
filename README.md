@@ -2,7 +2,7 @@
 
 > "A Cleaner World, A Fuller Wallet" — dispose of recyclable trash, earn points, and redeem them for rewards.
 
-A two-part React + TypeScript + Vite application: a **user-facing web app** (`frontend`) where people sign up, log in, and track their points, and a **kiosk-style deposit app** (`backend`) used at a physical trash-collection station to award points when someone drops off paper, cardboard, or plastic.
+A two-part React + TypeScript + Vite application: a **user-facing web app** (`frontend`) where people sign up, log in, and track their points, and a **kiosk-style deposit app** (`backend`) used at a physical trash-collection station to award points when someone drops off paper, cardboard, or plastic. Created by a team of 4 students.
 
 > Despite its name, the `backend` directory is **not** an API server — it's a second React/Vite front-end (a kiosk UI). The actual data layer is a mock REST API served by [`json-server`](https://github.com/typicode/json-server) from `frontend/data/db.json`. Naming/structure notes are called out below in case that wasn't intentional.
 
